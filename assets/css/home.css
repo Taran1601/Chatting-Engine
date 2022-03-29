@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(#2c48e7, #91b3e5); }
+  body .main-div {
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 50%;
+    background-color: #002280;
+    text-align: center; }
+    body .main-div h1 {
+      color: #e90ea0;
+      background-color: #c0c4ff;
+      width: 96.8%;
+      margin-top: 0px;
+      text-align: center;
+      padding: 10px;
+      font-family: 'Satisfy', cursive; }
+    body .main-div .sign-in {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; }
+      body .main-div .sign-in span {
+        color: white;
+        margin-left: -60%; }
+      body .main-div .sign-in .fas.fa-star-of-life {
+        font-size: 10px;
+        color: red;
+        margin-left: 3px; }
+      body .main-div .sign-in input {
+        background: transparent;
+        height: 40px;
+        width: 300px;
+        margin: 10px;
+        background-color: #9de1fc;
+        border-radius: 10px;
+        text-align: center; }
+      body .main-div .sign-in input:focus {
+        border: none;
+        outline: none; }
+      body .main-div .sign-in input:hover {
+        background-color: lightyellow; }
+      body .main-div .sign-in button {
+        background-color: #ffacc7;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        width: 200px;
+        border: none;
+        margin-top: 10px;
+        border-radius: 10px; }
+      body .main-div .sign-in button:hover {
+        cursor: pointer;
+        box-shadow: #c789e4 0px 0px 0px 2px, rgba(195, 195, 236, 0.897) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; }
+    body .main-div .sign-up {
+      margin-top: 70px;
+      border-top: 1px solid lightgray;
+      height: 72px;
+      background-color: #c0c4ff; }
+      body .main-div .sign-up label {
+        color: black;
+        font-weight: bold;
+        font-size: 20px; }
+      body .main-div .sign-up button {
+        text-decoration: underline;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        color: #2c7c8a;
+        margin-top: 30px;
+        font-size: 15px; }
+      body .main-div .sign-up button:hover {
+        cursor: pointer; }

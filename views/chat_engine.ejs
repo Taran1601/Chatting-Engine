@@ -1,0 +1,54 @@
+<title><%= title %></title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/css/chat_engine.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+<div class="main-div">
+        <h1>Let's Talk  <a href="/sign-out"><i class="fas fa-sign-out-alt"></i></a></h1>
+     <% if(locals.user) {%>
+        <div id="user-chat-box">
+            <ul id="chat-messages-list">
+                <li class="other-message">
+                    <h3><%= locals.user.name %></h3>
+                    <span>other message</span>
+                </li>
+                <li class="self-message">
+                <h3><%= locals.user.name %></h3>
+                 <span>self message</span>
+                </li>
+            </ul>
+            <div id="chat-message-input-container">
+                <input id="chat-message-input" placeholder="Type message here">
+                <button id="send-message">Send <i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    <%}%>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="/js/chat_engine.js"></script>
+ <% if(locals.user) {%>
+ <script>
+     new ChatEngine('user-chat-box','<%= locals.user.email %>', '<%= locals.user.name %>');
+ </script>
+ <% } %>
+ <script>
+    <% if(flash.success && flash.success.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.success %>',
+            type:'success',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+    <% if(flash.error && flash.error.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.error %>',
+            type:'error',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+</script>

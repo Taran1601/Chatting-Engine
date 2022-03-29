@@ -1,0 +1,94 @@
+body{
+    background: linear-gradient(#2c48e7, #91b3e5);
+    .main-div{
+        margin: auto;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        width: 50%;
+        background-color: rgb(0, 34, 128);
+        text-align: center;
+        h1{
+            color: rgb(233, 14, 160);
+            background-color: rgb(192, 196, 255);
+            width: 96.8%;
+            margin-top: 0px;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Satisfy', cursive;
+        }
+        .sign-in{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            span{
+                color:white;
+                margin-left:-60%;
+            }
+            .fas.fa-star-of-life{
+                font-size:10px;
+                color: red;
+                margin-left:3px;
+            }
+            
+            input{
+                background:transparent;
+                height: 40px;
+                width:300px;
+                margin:10px;
+                background-color: rgb(157, 225, 252);
+                border-radius: 10px;
+                text-align: center;
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+            input:hover{
+                background-color:lightyellow;
+            }
+            button{
+                background-color: rgb(255, 172, 199);
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10px;
+                width:200px;
+                border: none;
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+            button:hover{
+                cursor: pointer;
+                box-shadow: rgb(199, 137, 228) 0px 0px 0px 2px, rgba(195, 195, 236, 0.897) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            }
+        }
+        .sign-up{
+            margin-top: 70px;
+            border-top: 1px solid lightgray;
+            height:72px;
+            background-color: rgb(192, 196, 255);
+            label{
+                color:black;
+                font-weight: bold;
+                font-size: 20px;
+                
+            }
+            button{
+                text-decoration: underline;
+                border: none;
+                background: transparent;
+                font-weight: bold;
+                color: rgb(44, 124, 138);
+                margin-top: 30px;
+                font-size: 15px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+        }
+
+}
+}

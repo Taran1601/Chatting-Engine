@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(#eafa8e, #e5919f);
+    .main-div{
+        border-top:7px solid rebeccapurple;
+        border-bottom:7px solid rebeccapurple;
+        height:auto;
+        width:50%;
+        margin:auto;
+        margin-top: 40px;
+        h1{
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: blue;
+        }
+        .sign-up{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: auto;
+            input{
+                margin:10%;
+                border: none;
+                background: transparent;
+                padding:5px;
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+            input:hover{
+                background-color: lightyellow;
+                border-bottom: 2px solid skyblue;
+                height:25px;
+            }
+            button{
+                font-size: 20px;
+                font-weight: bold;
+                padding: 5px;
+                width:200px;
+                background-color: lightblue;
+                border-radius: 20px;
+                border:2px solid black;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            button:hover{
+                cursor: pointer;
+                box-shadow: rgba(10, 10, 226, 0.897) 0px 4px 6px -1px, rgb(252, 248, 248) 0px 1px 0px inset;
+            }
+        }
+        span{
+            margin-left:10px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .fas.fa-star-of-life{
+             color:red;
+             font-size:10px;
+        }
+    }
+}

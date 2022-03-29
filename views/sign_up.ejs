@@ -1,0 +1,37 @@
+<title><%= title %></title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/css/sign_up.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+<div class="main-div">
+    <h1>Sign Up to WeChat!</h1>
+   <div class="sign-up">
+    <form action="/create-user" method="post">
+        <div><i class="fas fa-user" id="icons"></i><span>Name:</span><i class="fas fa-star-of-life"></i><br><input type="text" name="name" placeholder="Your Name" required></div>
+        <div><i class="fas fa-envelope" id="icons"></i><span>Email:</span><i class="fas fa-star-of-life"></i><br><input type="email" name="email" placeholder="Your Email" required></div>
+        <div><i class="fas fa-lock" id="icons"></i><span>Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="password" placeholder="Password" required></div>
+        <div><i class="fas fa-lock" id="icons"></i><span>Confirm Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="confirm_password" placeholder=" Confirm Password" required></div>
+        <div><button type="submit">Sign Up</button></div>
+    </form>
+   </div>
+</div>
+<script>
+    <% if(flash.success && flash.success.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.success %>',
+            type:'success',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+    <% if(flash.error && flash.error.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.error %>',
+            type:'error',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+</script>

@@ -1,0 +1,44 @@
+<title><%= title %></title>
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="/css/home.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script><div class="main-div">
+    <h1><i class="fab fa-weixin"></i> WeChat!</h1>
+    <div class="sign-in">
+            <form action="/login" method="post">
+                <div><span>Email:</span><i class="fas fa-star-of-life"></i><br><input type="email" name="email" placeholder="Your email.." required></div>
+                <div><span>Password:</span><i class="fas fa-star-of-life"></i><br><input type="password" name="password" placeholder="Your password.." required></div>
+                <div><button type="submit">Log In <i class="fas fa-sign-in-alt"></i></button></div>
+            </form>
+    </div>
+   <div class="sign-up"> 
+        <form action="/sign-up" method="post">
+            <label>New to WeChat?
+                <button type="submit">Sign Up <i class="fas fa-user-plus"></i></button>
+            </label>
+        </form>
+</div>
+</div>
+    <script>
+    <% if(flash.success && flash.success.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.success %>',
+            type:'success',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+    <% if(flash.error && flash.error.length>0) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.error %>',
+            type:'error',
+            layout:'topRight',
+            timeout:1500
+        }).show();
+    <%}%>
+</script>

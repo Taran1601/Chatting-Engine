@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background: linear-gradient(rgba(231, 238, 132, 0.973), #ee94cb); }
+  body .main-div {
+    width: 70%;
+    background: linear-gradient(#8ee4fa, #d991e7);
+    margin-left: 150px;
+    margin-top: 80px; }
+    body .main-div h1 {
+      background-color: purple;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      width: 98.8%;
+      align-items: center;
+      padding: 5px;
+      font-style: oblique; }
+      body .main-div h1 a {
+        text-decoration: none;
+        color: white; }
+    body .main-div #user-chat-box #chat-messages-list {
+      list-style: none; }
+      body .main-div #user-chat-box #chat-messages-list .other-message {
+        text-align: left;
+        padding: 2px;
+        margin-left: -30px; }
+        body .main-div #user-chat-box #chat-messages-list .other-message h3 {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+        body .main-div #user-chat-box #chat-messages-list .other-message span {
+          display: inline-block;
+          padding: 10px;
+          background-color: lightyellow;
+          margin-top: -15px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          border: 1px solid lightgray;
+          border-radius: 10px; }
+      body .main-div #user-chat-box #chat-messages-list .self-message {
+        text-align: right;
+        padding: 2px; }
+        body .main-div #user-chat-box #chat-messages-list .self-message h3 {
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+        body .main-div #user-chat-box #chat-messages-list .self-message span {
+          display: inline-block;
+          padding: 10px;
+          background-color: #aef3ae;
+          margin-top: -15px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          border: 1px solid lightgray;
+          border-radius: 10px; }
+    body .main-div #user-chat-box #chat-message-input-container {
+      width: 100%;
+      border-top: 2px solid gray;
+      display: flex;
+      height: 7%; }
+      body .main-div #user-chat-box #chat-message-input-container input {
+        width: 80%;
+        border: none;
+        background-color: aliceblue; }
+      body .main-div #user-chat-box #chat-message-input-container input:focus {
+        border: none;
+        outline: none; }
+      body .main-div #user-chat-box #chat-message-input-container button {
+        width: 20%;
+        font-size: 20px;
+        background-color: #6ca7f3;
+        border: none;
+        color: white;
+        font-weight: bold; }
+      body .main-div #user-chat-box #chat-message-input-container button:hover {
+        cursor: pointer; }
